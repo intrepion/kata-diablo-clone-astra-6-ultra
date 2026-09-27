@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#121516" />
+    <meta
+      name="description"
+      content="Descend into Ashveil. An original isometric action RPG of forgotten crypts, forbidden relics, and the things that stir below."
+    />
+    <title>Ashveil — The Hollow Below</title>
+    <link rel="icon" href="./src/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <svg
+      class="svg-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <symbol id="i-sigil" viewBox="0 0 40 52">
+          <path
+            d="M20 2 35 33 20 49 5 33 20 2Z M20 14v28M11 30l9-8 9 8M8 37l12-7 12 7"
+          />
+        </symbol>
+        <symbol id="i-sword" viewBox="0 0 32 32">
+          <path
+            d="m24 3 5 0 0 5-15 15-5-5L24 3ZM7 16l10 10M4 28l7-7M3 26l3 3"
+          />
+        </symbol>
+        <symbol id="i-cleave" viewBox="0 0 32 32">
+          <path
+            d="m9 27 12-21M18 6l4-3 4 3M14 10C4 9 2 16 6 21c1-5 5-6 8-4M23 10c9 0 9 9 4 13 0-4-3-5-7-5M6 27l6 3"
+          />
+        </symbol>
+        <symbol id="i-fire" viewBox="0 0 32 32">
+          <path
+            d="M17 2c2 10-8 9-4 17 1-4 5-5 7-9 1 5 7 7 7 13 0 11-22 10-22-1 0-6 5-10 6-14-1 7 2 7 2 7M18 21c5 6 1 10-3 7-2-2 0-5 3-7Z"
+          />
+        </symbol>
+        <symbol id="i-dash" viewBox="0 0 32 32">
+          <path
+            d="m16 3 10 9-9 5 5 4-15 9 6-12-6-4 9-11ZM3 7h7M1 22h5M24 26h6"
+          />
+        </symbol>
+        <symbol id="i-potion" viewBox="0 0 32 32">
+          <path
+            d="M12 3h8v7c0 3 7 6 7 12 0 10-22 10-22 0 0-6 7-9 7-12V3ZM10 3h12M8 20h16M11 23h3"
+          />
+        </symbol>
+        <symbol id="i-bag" viewBox="0 0 32 32">
+          <path
+            d="M11 8V6a5 5 0 0 1 10 0v2M7 9h18l2 20H5L7 9ZM6 18h20M13 16v5h6v-5"
+          />
+        </symbol>
+        <symbol id="i-map" viewBox="0 0 32 32">
+          <path
+            d="m2 7 9-4 10 4 9-4v22l-9 4-10-4-9 4V7ZM11 3v22M21 7v22M15 13l3 4M18 13l-3 4"
+          />
+        </symbol>
+        <symbol id="i-book" viewBox="0 0 32 32">
+          <path
+            d="M16 7C12 3 6 3 2 4v23c5-2 10-1 14 2 4-3 9-4 14-2V4c-4-1-10-1-14 3v22M6 10l6 1M6 16l6 1M20 11l6-1M20 17l6-1"
+          />
+        </symbol>
+        <symbol id="i-sound" viewBox="0 0 32 32">
+          <path
+            d="M3 12h6l8-7v22l-8-7H3v-8ZM22 10c4 3 4 9 0 12M26 5c7 6 7 16 0 22"
+          />
+        </symbol>
+        <symbol id="i-settings" viewBox="0 0 32 32">
+          <path
+            d="M13 3h6l1 5 4 2 4-1 3 5-4 3v4l-4 4-4-1-3 5-5-2v-5l-5-3-4 1-2-5 4-3V8l5-2 4 2 0-5Z"
+          />
+          <circle cx="16" cy="16" r="5" />
+        </symbol>
+        <symbol id="i-skull" viewBox="0 0 32 32">
+          <path
+            d="M8 24C-2 13 5 2 16 2s18 11 8 22v6H8v-6ZM12 25v5M20 25v5M14 21h4"
+          />
+          <circle cx="10" cy="15" r="3" />
+          <circle cx="22" cy="15" r="3" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 32 32">
+          <path
+            d="m16 2 12 5v10c0 6-7 11-12 14C11 28 4 23 4 17V7l12-5ZM16 8v16M10 14h12"
+          />
+        </symbol>
+        <symbol id="i-coin" viewBox="0 0 32 32">
+          <ellipse cx="16" cy="16" rx="11" ry="13" />
+          <path d="m16 8 5 8-5 8-5-8 5-8Z" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 32 32">
+          <path d="M4 16h23M19 8l8 8-8 8" />
+        </symbol>
+      </defs>
+    </svg>
+    <div class="app-shell">
+      <header class="masthead">
+        <a class="brand" href="./" aria-label="Ashveil home"
+          ><svg><use href="#i-sigil" /></svg
+          ><span>ASHVEIL<small>THE HOLLOW BELOW</small></span></a
+        >
+        <nav class="main-nav" aria-label="Game navigation">
+          <button class="nav-button active" id="descent-button">
+            <span class="nav-diamond">◇</span> THE DESCENT</button
+          ><button class="nav-button" id="codex-button">
+            CODEX <span class="nav-index">02</span>
+          </button>
+        </nav>
+        <div class="header-actions">
+          <span class="offline"><i></i> SOLO ADVENTURE</span
+          ><button
+            class="icon-button"
+            id="sound-button"
+            aria-label="Enable sound"
+            title="Enable sound"
+          >
+            <svg><use href="#i-sound" /></svg
+            ><span class="sound-slash"></span></button
+          ><button
+            class="icon-button"
+            id="settings-button"
+            aria-label="Settings and controls"
+            title="Settings and controls"
+          >
+            <svg><use href="#i-settings" /></svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="game-shell" aria-label="The dungeon">
+          <canvas
+            id="dungeon"
+            tabindex="0"
+            aria-label="Isometric dungeon. Click to move or attack enemies. WASD to move, Shift to attack, 1 to cleave, 2 to cast fire, Space to dodge, Q to heal, E to use stairs."
+          ></canvas>
+          <div class="scene-grain" aria-hidden="true"></div>
+          <div class="location overlay">
+            <div class="eyebrow">
+              <span class="tiny-diamond"></span
+              ><span id="act-label">ACT I · THE UNDERCROFT</span>
+            </div>
+            <h1 id="location-name">The Forsaken Crypt</h1>
+            <div class="location-meta">
+              <span id="floor-label">DEPTH 01 / 03</span
+              ><span class="meta-separator"></span
+              ><span class="danger-level">HOSTILE TERRITORY</span>
+            </div>
+          </div>
+          <aside class="quest overlay">
+            <div class="quest-heading">
+              <span class="quest-symbol">◇</span> INTO THE HOLLOW
+              <span class="quest-index">I</span>
+            </div>
+            <p id="quest-description">Silence the restless dead.</p>
+            <div class="quest-objective">
+              <span id="quest-check">◇</span
+              ><span id="quest-progress">Defeat the crypt's guardians</span
+              ><span id="kill-counter">0 / 0</span>
+            </div>
+            <div class="quest-track"><span id="quest-fill"></span></div>
+            <p class="quest-flavor" id="quest-flavor">
+              Some doors should stay closed.
+            </p>
+          </aside>
+          <div class="side-tools overlay">
+            <button
+              class="square-button"
+              id="inventory-button"
+              aria-label="Open inventory"
+              title="Inventory (I)"
+            >
+              <svg><use href="#i-bag" /></svg><kbd>I</kbd
+              ><i id="new-loot-dot" hidden></i></button
+            ><button
+              class="square-button"
+              id="map-button"
+              aria-label="Open map"
+              title="Map (M)"
+            >
+              <svg><use href="#i-map" /></svg><kbd>M</kbd></button
+            ><button
+              class="square-button"
+              id="help-button"
+              aria-label="How to play"
+              title="How to play (?)"
+            >
+              <span class="help-glyph">?</span>
+            </button>
+          </div>
+          <div class="boss-bar overlay" id="boss-bar" hidden>
+            <span>VORATH, THE HOLLOW KING</span>
+            <div><i id="boss-health"></i></div>
+            <small>WARDEN OF THE LAST GATE</small>
+          </div>
+          <div class="toast-stack overlay" id="toasts" aria-live="polite"></div>
+          <div class="start-prompt overlay" id="start-prompt">
+            <div class="start-flourish">✦</div>
+            <p>The light ends here. Your story doesn't.</p>
+            <button id="begin-button">
+              ENTER THE CRYPT <svg><use href="#i-arrow" /></svg></button
+            ><small>Click to move · Click an enemy to attack</small>
+          </div>
+          <button class="interact-prompt overlay" id="interact-button" hidden>
+            <kbd>E</kbd><span>Descend deeper</span
+            ><svg><use href="#i-arrow" /></svg>
+          </button>
+          <div class="minimap-panel overlay">
+            <div class="minimap-head">
+              <span><i class="tiny-diamond"></i> LOCAL MAP</span
+              ><button id="expand-map" aria-label="Expand map">↗</button>
+            </div>
+            <canvas
+              id="minimap"
+              width="210"
+              height="142"
+              aria-label="Dungeon minimap"
+            ></canvas>
+            <div class="minimap-footer">
+              <span class="map-marker"></span>
+              <span id="map-location">The Forsaken Crypt</span><kbd>M</kbd>
+            </div>
+          </div>
+          <div class="scene-caption overlay">
+            <span class="ember-dot"></span
+            ><span id="scene-hint"
+              >A forgotten sanctuary. An unbroken curse.</span
+            >
+          </div>
+          <div class="pause-badge overlay" id="pause-badge" hidden>
+            Ⅱ &nbsp; PAUSED
+          </div>
+        </section>
+        <section class="hud" aria-label="Player status and abilities">
+          <div class="character-block">
+            <div class="portrait">
+              <svg viewBox="0 0 64 74" aria-hidden="true">
+                <path
+                  fill="#48272a"
+                  d="M5 73 10 46 21 32 20 21 32 8 44 21 43 32 54 46 59 73Z"
+                />
+                <path fill="#a6a297" d="m22 25 10-9 10 9-3 16-7 5-7-5Z" />
+                <path
+                  fill="#252d2e"
+                  d="m23 25 9-10 9 10-9-3-9 3Zm3 9h12l-6 8Z"
+                />
+                <path
+                  fill="#b39157"
+                  d="m10 47 13-7 9 11 9-11 13 7-3 10-15-6-4 19-4-19-15 6Z"
+                />
+                <path fill="#172022" d="m24 27 7 3-6 3Zm16 0-7 3 6 3Z" /></svg
+              ><span id="level-medallion">1</span>
+            </div>
+            <div>
+              <span class="character-class">THE EXILE</span>
+              <h2>Wanderer</h2>
+              <div class="character-meta">
+                <span id="character-level">Level 1</span><span>·</span
+                ><span id="character-title">Ashen Vanguard</span>
+              </div>
+            </div>
+          </div>
+          <div class="combat-hud">
+            <div class="orb-group health-group">
+              <div class="orb health-orb" id="health-orb">
+                <div class="orb-liquid"></div>
+                <div class="orb-shine"></div>
+                <span id="health-number">140</span>
+              </div>
+              <div class="orb-caption">
+                LIFE <span id="health-total">/ 140</span>
+              </div>
+            </div>
+            <div class="abilities">
+              <button
+                class="ability"
+                data-skill="attack"
+                aria-label="Basic attack (Shift)"
+                title="Rend · Basic attack · Hold Shift"
+              >
+                <kbd>⇧</kbd><svg><use href="#i-sword" /></svg
+                ><span class="ability-name">REND</span><i class="cooldown"></i
+                ><span class="cooldown-number"></span></button
+              ><button
+                class="ability"
+                data-skill="cleave"
+                aria-label="Cleave (1)"
+                title="Reaping cleave · 20 essence · 4s cooldown"
+              >
+                <kbd>1</kbd><svg><use href="#i-cleave" /></svg
+                ><span class="ability-name">CLEAVE</span><i class="cooldown"></i
+                ><span class="cooldown-number"></span></button
+              ><button
+                class="ability fire-ability"
+                data-skill="fireball"
+                aria-label="Fireball (2)"
+                title="Ember bolt · 25 essence · 3s cooldown"
+              >
+                <kbd>2</kbd><svg><use href="#i-fire" /></svg
+                ><span class="ability-name">EMBER</span><i class="cooldown"></i
+                ><span class="cooldown-number"></span></button
+              ><button
+                class="ability"
+                data-skill="dash"
+                aria-label="Dodge (Space)"
+                title="Shadowstep · Dodge · 2.5s cooldown"
+              >
+                <kbd class="wide-key">SPACE</kbd
+                ><svg><use href="#i-dash" /></svg
+                ><span class="ability-name">EVADE</span><i class="cooldown"></i
+                ><span class="cooldown-number"></span></button
+              ><span class="ability-divider"></span
+              ><button
+                class="ability potion-ability"
+                data-skill="potion"
+                aria-label="Drink healing potion (Q)"
+                title="Crimson draught · Restore life"
+              >
+                <kbd>Q</kbd><svg><use href="#i-potion" /></svg
+                ><b id="potion-count">5</b
+                ><span class="ability-name">HEAL</span>
+              </button>
+            </div>
+            <div class="orb-group mana-group">
+              <div class="orb mana-orb" id="mana-orb">
+                <div class="orb-liquid"></div>
+                <div class="orb-shine"></div>
+                <span id="mana-number">100</span>
+              </div>
+              <div class="orb-caption">
+                ESSENCE <span id="mana-total">/ 100</span>
+              </div>
+            </div>
+          </div>
+          <div class="wealth-block">
+            <span class="gold-count"
+              ><svg><use href="#i-coin" /></svg><span id="gold-count">0</span
+              ><small>GOLD</small></span
+            ><button class="inventory-link" id="inventory-link">
+              INVENTORY <kbd>I</kbd> <span>↗</span>
+            </button>
+          </div>
+        </section>
+        <div class="experience-track" aria-label="Experience progress">
+          <span id="xp-fill"></span><i></i>
+        </div>
+        <footer class="footer">
+          <div class="control-hints">
+            <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move</span
+            ><span><span class="mouse-icon"></span> Move / Attack</span
+            ><span><kbd>E</kbd> Interact</span><span><kbd>ESC</kbd> Pause</span>
+          </div>
+          <span id="xp-label">0 / 100 XP</span
+          ><button id="footer-help">
+            A GUIDE FOR THE LOST <span>↗</span>
+          </button>
+        </footer>
+      </main>
+    </div>
+    <dialog id="panel" aria-labelledby="panel-title">
+      <div class="dialog-frame">
+        <div class="dialog-top">
+          <span class="eyebrow" id="panel-kicker">ASHVEIL</span
+          ><button
+            id="close-panel"
+            class="close-button"
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+        <h2 id="panel-title"></h2>
+        <div id="panel-body"></div>
+      </div>
+    </dialog>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
