@@ -1,5 +1,9 @@
 # Ashveil
 
+## Play online
+
+[Play Ashveil](https://intrepion.github.io/kata-diablo-clone-astra-6-ultra/) — free, playable in your browser.
+
 An original, playable isometric dungeon crawler inspired by classic Diablo-style action RPGs. Descend through three floors, defeat the dungeon's guardians, collect equipment, and escape the depths. All characters, architecture, lighting, and effects are drawn with original Canvas 2D artwork; no game assets or external services are required.
 
 ![Ashveil dungeon and combat interface](docs/ashveil.png)
