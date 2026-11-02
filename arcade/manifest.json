@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "gameId": "kata-diablo-clone-astra-6-ultra",
   "playUrl": "https://intrepion.github.io/kata-diablo-clone-astra-6-ultra/",
   "screenshots": [
@@ -12,6 +12,52 @@
         "sourcePath": "docs/ashveil.png",
         "deployedBuild": null,
         "captureDate": null
+      }
+    },
+    {
+      "path": "arcade/screenshots/ci-20261102-01.jpg",
+      "sha256": "cc67c34a4d4bde994a05b3b04ce818c5f7058462be0482bd469a48b4e0c9bbd4",
+      "alt": "Ashveil gameplay, view 1",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-01.png",
+        "sourceSha256": "73e265c4b114e35e3e8a45802380d89db3c4222dcc681a341c9bae880be4f72d",
+        "captureCommit": "3b751b2ecdaacf81ae0cdfbaf27dfcab4a53332c",
+        "workflowRunId": "41427195851",
+        "inputHashes": {
+          "index.html": "6210ee0febaa99d8b792d976fa0826e67ad63b08e543c8fa33e51211d4908584",
+          "src/engine.js": "225efa253d413d4eedfacd54fa5768423c1be082ad8f785114b904c78870aaad",
+          "src/favicon.svg": "91ca5f6df99d1c251215fa6ae9531be3676872e193c5b13b394e1125a70bb1e3",
+          "src/main.js": "4ac6df7b63e9bb03cfc9861adb80173d8ff8b64491ec833ace30bbbf4dd39405",
+          "src/renderer.js": "69a77a759ba8d16e1c48322ab879d73fdf0abe5bbe8bd5ad1ca8eb9619517f89",
+          "src/style.css": "3c6ecf64b840c80245693d8e2af6621fa680ea46f228712d32e65284f8a272cb"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:01:20Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "6f2754594df1e93ba30777e1a41d0cd04d7d1c36ce85719594dbf0c15a8e2bc2"
+      }
+    },
+    {
+      "path": "arcade/screenshots/ci-20261102-02.jpg",
+      "sha256": "91450aba2283ec321cf94f5af94ce7ff23a772358e517dfaedf7a295fdafa4c7",
+      "alt": "Ashveil gameplay, view 2",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-02.png",
+        "sourceSha256": "916c9dbbfe921fbf089d45325b7c726274c00d6882cd8dc1ee65207960bf744b",
+        "captureCommit": "3b751b2ecdaacf81ae0cdfbaf27dfcab4a53332c",
+        "workflowRunId": "41427195851",
+        "inputHashes": {
+          "index.html": "6210ee0febaa99d8b792d976fa0826e67ad63b08e543c8fa33e51211d4908584",
+          "src/engine.js": "225efa253d413d4eedfacd54fa5768423c1be082ad8f785114b904c78870aaad",
+          "src/favicon.svg": "91ca5f6df99d1c251215fa6ae9531be3676872e193c5b13b394e1125a70bb1e3",
+          "src/main.js": "4ac6df7b63e9bb03cfc9861adb80173d8ff8b64491ec833ace30bbbf4dd39405",
+          "src/renderer.js": "69a77a759ba8d16e1c48322ab879d73fdf0abe5bbe8bd5ad1ca8eb9619517f89",
+          "src/style.css": "3c6ecf64b840c80245693d8e2af6621fa680ea46f228712d32e65284f8a272cb"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:01:20Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "6f2754594df1e93ba30777e1a41d0cd04d7d1c36ce85719594dbf0c15a8e2bc2"
       }
     }
   ]
