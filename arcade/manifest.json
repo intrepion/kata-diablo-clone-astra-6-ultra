@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "gameId": "kata-diablo-clone-astra-6-ultra",
+  "playUrl": "https://intrepion.github.io/kata-diablo-clone-astra-6-ultra/",
+  "screenshots": [
+    {
+      "path": "arcade/screenshots/view-01.jpg",
+      "sha256": "359a7e6a490b8f21acd4962aa0eeebcfc43ea5e161d02d6870d052d862e201ff",
+      "alt": "Gameplay capture 1",
+      "provenance": {
+        "kind": "existing_repository_capture",
+        "sourcePath": "docs/ashveil.png",
+        "deployedBuild": null,
+        "captureDate": null
+      }
+    }
+  ]
+}

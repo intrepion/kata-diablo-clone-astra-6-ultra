@@ -65,3 +65,7 @@ The syntax checker covers the game and build scripts; the automated tests exerci
 - [Architecture](docs/architecture.md): module boundaries, game state, rendering, and verification.
 
 Ashveil is an independent prototype. Diablo is a trademark of Blizzard Entertainment; this project is not affiliated with or endorsed by Blizzard.
+
+## Arcade metadata
+
+See [docs/arcade-metadata.md](docs/arcade-metadata.md) for the game-owned manifest and screenshot provenance.
